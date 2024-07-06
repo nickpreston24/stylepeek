@@ -1,0 +1,35 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <p class="bento-shadow-blue">Re-style raw Html pages</p>
+    <a href="/Import">
+
+        <button>Import Now</button>
+    </a>
+</div>
+
+
+<style>
+    .bento {
+        /*Src: https://tailwindcss.com/docs/border-radius*/
+        border-radius: 1.5rem;
+        border-color: #444444;
+        box-shadow: #49ff18;
+    }
+    .bento-shadow-blue {
+      box-shadow: 0 .25rem .75rem #00caff;
+    }
+    
+    .bento-shadow-green {
+      box-shadow: 0 .25rem .75rem #00ffca;
+    }
+    
+    .bento-shadow-red {
+      box-shadow: 0 .25rem .75rem #ff00ca;
+    }
+
+</style>

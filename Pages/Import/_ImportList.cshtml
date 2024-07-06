@@ -1,0 +1,16 @@
+@model Index
+@{
+    var filenames = @Model.Files;
+}
+
+<div>
+    <pre>@filenames.Count</pre>
+    <ul>
+        @foreach (var fn in filenames)
+        {
+            <hydro-li>
+                @fn
+            </hydro-li>
+        }
+    </ul>
+</div>

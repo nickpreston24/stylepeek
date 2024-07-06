@@ -1,0 +1,6 @@
+wwwroot/lib
+node_modules/
+obj/
+bin/
+.idea
+.vscode

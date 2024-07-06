@@ -1,0 +1,22 @@
+@page
+@model stylepeek.Pages.Import.Index
+
+@{
+}
+
+<section>
+
+    @* <h1>title</h1> *@
+    @* <h2>title2</h2> *@
+    <div
+        hx-get="@Url.Page("Index", "HtmlFiles")"
+        hx-trigger="load"
+        hx-vars="{folder: '~/Downloads'}"
+        hx-swap="innerHTML"
+        hx-target="#found">
+    </div>
+    <span id="found">
+        ...
+    </span>
+    <button class="btn btn-primary">Import Html</button>
+</section>

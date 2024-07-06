@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - stylepeek</title>
+
+    <script src="https://unpkg.com/htmx.org@latest"
+            asp-fallback-src="~/lib/htmx.org/dist/htmx.min.js"
+            asp-fallback-test="window.htmx"
+            crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.umd.min.js"
+            asp-fallback-src="~/lib/chartjs"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.47.0/dist/full.css" rel="stylesheet" type="text/css"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Alpine Core -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <div class="navbar-start m-2">
+            <a href="/">
+                <span class="text-xl text-white font-bold">stylepeek</span>
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                @* <li> *@
+                @*     <a>item 1</a> *@
+                @* </li> *@
+                @* <li> *@
+                @*     <a>item 2</a> *@
+                @* </li> *@
+            </ul>
+        </div>
+        <div class="navbar-end flex flex-row gap-4">
+            <div class="tooltip tooltip-bottom" data-tip="Coming soon!">
+                <span disabled class="btn btn-ghost">
+                    <a href="/Pricing" class="">Pricing</a>
+                </span>
+            </div>
+            <div class="tooltip tooltip-bottom" data-tip="Coming soon!">
+                <span disabled class="btn btn-ghost">
+                    <a href="/Login" class="">Login</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    @* <hydro-nav> *@
+    @*     <slot name="links"> *@
+    @*         <li> *@
+    @*             <a href="/Todos">🏠 Home</a> *@
+    @*         </li> *@
+    @*         <li> *@
+    @*             <a href="/Dashes"> *@
+    @*                 Dashes *@
+    @*             </a> *@
+    @*         </li> *@
+    @*     </slot> *@
+    @* </hydro-nav> *@
+
+    @* <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"> *@
+    @*     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between"> *@
+    @*         <ul class="navbar-nav flex-grow-1"> *@
+    @*             <li class="nav-item"> *@
+    @*                 <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a> *@
+    @*             </li> *@
+    @*             <li class="nav-item"> *@
+    @*                 <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a> *@
+    @*             </li> *@
+    @*         </ul> *@
+    @*     </div> *@
+    @* </nav> *@
+</header>
+<div class="container">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2024 - stylepeek - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    </div>
+</footer>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
